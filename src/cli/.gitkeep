@@ -1,0 +1,29 @@
+"""Net-Map CLI: punto de entrada de línea de comandos.
+
+Este módulo reserva la carpeta src/cli para el ejecutable `netmap`.
+No se ejecuta automáticamente; es código fuente válido y sin errores de sintaxis.
+"""
+
+from __future__ import annotations
+
+__all__ = ["main"]
+
+
+def main(argv: list[str] | None = None) -> int:
+    """Punto de entrada de la CLI de Net-Map.
+
+    Args:
+        argv: Argumentos de línea de comandos (sin incluir el nombre del programa).
+
+    Returns:
+        Código de salida del proceso (0 = éxito).
+    """
+    if argv is None:
+        argv = []
+    # Placeholder: la implementación real se agregará en src/cli.
+    _ = argv
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
