@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Net-Map
+Comment=Descubrimiento de redes y auditoría de seguridad
+Exec=netmap-gui
+Icon=utilities-terminal
+Terminal=false
+Categories=Network;Security;
