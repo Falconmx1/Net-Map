@@ -1,0 +1,41 @@
+"""Net-Map Packets: generación y análisis de paquetes IP sin procesar.
+
+Base de las técnicas de escaneo y de `netping`.
+No se ejecuta automáticamente; es código fuente válido y sin errores de sintaxis.
+"""
+
+from __future__ import annotations
+
+__all__ = ["PacketBuilder", "PacketAnalyzer"]
+
+
+class PacketBuilder:
+    """Construye paquetes IP sin procesar."""
+
+    def build(self, payload: bytes = b"") -> bytes:
+        """Construye un paquete con el payload indicado.
+
+        Args:
+            payload: Datos a incluir en el paquete.
+
+        Returns:
+            Paquete serializado como bytes.
+        """
+        # Placeholder: la implementación real se agregará en src/packets.
+        return bytes(payload)
+
+
+class PacketAnalyzer:
+    """Analiza respuestas de paquetes IP sin procesar."""
+
+    def analyze(self, raw: bytes) -> dict[str, object]:
+        """Analiza un paquete crudo y extrae campos relevantes.
+
+        Args:
+            raw: Paquete crudo recibido.
+
+        Returns:
+            Diccionario con los campos interpretados.
+        """
+        # Placeholder: la implementación real se agregará en src/packets.
+        return {"length": len(raw)}
