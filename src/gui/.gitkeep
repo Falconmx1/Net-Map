@@ -1,0 +1,23 @@
+"""Net-Map GUI: interfaz gráfica y visor de resultados.
+
+Este módulo reserva la carpeta src/gui para `netmap-gui`.
+No se ejecuta automáticamente; es código fuente válido y sin errores de sintaxis.
+"""
+
+from __future__ import annotations
+
+__all__ = ["run"]
+
+
+def run() -> int:
+    """Inicia la GUI de Net-Map.
+
+    Returns:
+        Código de salida del proceso (0 = éxito).
+    """
+    # Placeholder: la implementación real se agregará en src/gui.
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(run())
