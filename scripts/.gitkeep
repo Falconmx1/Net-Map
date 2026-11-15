@@ -1,0 +1,27 @@
+"""Net-Map Scripts: utilidades auxiliares de build, lint y release.
+
+Este módulo reserva la carpeta scripts para scripts de apoyo del proyecto.
+No se ejecuta automáticamente; es código fuente válido y sin errores de sintaxis.
+"""
+
+from __future__ import annotations
+
+import sys
+
+__all__ = ["show_info"]
+
+
+def show_info() -> int:
+    """Muestra información básica del entorno de scripts.
+
+    Returns:
+        Código de salida (0 = éxito).
+    """
+    print("Net-Map scripts: utilidades auxiliares.")
+    print(f"Python: {sys.version.split()[0]}")
+    print(f"Plataforma: {sys.platform}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(show_info())
