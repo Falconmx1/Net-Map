@@ -1,0 +1,24 @@
+"""Net-Map Transfer: transferencia, redirección y depuración de datos.
+
+Equivalente funcional a `netcat-map`.
+No se ejecuta automáticamente; es código fuente válido y sin errores de sintaxis.
+"""
+
+from __future__ import annotations
+
+__all__ = ["transfer"]
+
+
+def transfer(source: str, destination: str) -> int:
+    """Transfiere datos entre un origen y un destino.
+
+    Args:
+        source: Origen de los datos.
+        destination: Destino de los datos.
+
+    Returns:
+        Código de salida (0 = éxito).
+    """
+    # Placeholder: la implementación real se agregará en src/transfer.
+    _ = (source, destination)
+    return 0
