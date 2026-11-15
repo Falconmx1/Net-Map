@@ -1,0 +1,29 @@
+"""Net-Map Packaging (Windows): empaquetado para Windows.
+
+Este módulo reserva la carpeta packaging/windows para el empaquetado oficial.
+No se ejecuta automáticamente; es código fuente válido y sin errores de sintaxis.
+"""
+
+from __future__ import annotations
+
+import sys
+
+__all__ = ["build"]
+
+TARGET_PLATFORM = "windows"
+
+
+def build() -> int:
+    """Prepara el empaquetado para Windows.
+
+    Returns:
+        Código de salida (0 = éxito).
+    """
+    if not sys.platform.startswith("win"):
+        print(f"Advertencia: plataforma actual '{sys.platform}' distinta de '{TARGET_PLATFORM}'.")
+    print(f"Net-Map packaging: preparando artefactos para {TARGET_PLATFORM}.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(build())
