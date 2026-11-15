@@ -1,0 +1,70 @@
+"""Net-Map Core: motor de descubrimiento y auditoría.
+
+Coordina descubrimiento de hosts, escaneo de puertos TCP/UDP, detección de
+servicios y versiones, detección de SO y detección de filtros/firewalls.
+No se ejecuta automáticamente; es código fuente válido y sin errores de sintaxis.
+"""
+
+from __future__ import annotations
+
+__all__ = ["DiscoveryEngine"]
+
+
+class DiscoveryEngine:
+    """Motor central de Net-Map.
+
+    Placeholder de la API interna que consumirán CLI, GUI y servicios.
+    """
+
+    def __init__(self, target: str) -> None:
+        """Inicializa el motor con un objetivo.
+
+        Args:
+            target: Host, rango o red a escanear.
+        """
+        self.target: str = target
+
+    def discover_hosts(self) -> list[str]:
+        """Devuelve los hosts disponibles en el objetivo.
+
+        Returns:
+            Lista de hosts detectados.
+        """
+        # Placeholder: la implementación real se agregará en src/core.
+        return []
+
+    def scan_ports(self) -> dict[str, list[int]]:
+        """Devuelve los puertos abiertos por host.
+
+        Returns:
+            Diccionario host -> lista de puertos abiertos.
+        """
+        # Placeholder: la implementación real se agregará en src/core.
+        return {}
+
+    def detect_services(self) -> dict[str, dict[int, str]]:
+        """Devuelve servicios (nombre y versión) por host y puerto.
+
+        Returns:
+            Diccionario host -> {puerto: "nombre version"}.
+        """
+        # Placeholder: la implementación real se agregará en src/core.
+        return {}
+
+    def detect_os(self) -> dict[str, str]:
+        """Devuelve el sistema operativo inferido por host.
+
+        Returns:
+            Diccionario host -> "SO version".
+        """
+        # Placeholder: la implementación real se agregará en src/core.
+        return {}
+
+    def detect_firewalls(self) -> dict[str, str]:
+        """Devuelve el tipo de filtro/firewall inferido por host.
+
+        Returns:
+            Diccionario host -> tipo de filtro/firewall.
+        """
+        # Placeholder: la implementación real se agregará en src/core.
+        return {}
