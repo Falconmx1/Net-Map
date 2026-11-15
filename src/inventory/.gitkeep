@@ -1,0 +1,49 @@
+"""Net-Map Inventory: inventario, cronogramas y uptime.
+
+Gestiona inventario de red, cronogramas de actualización de servicios y
+monitorización del tiempo de actividad de hosts o servicios.
+No se ejecuta automáticamente; es código fuente válido y sin errores de sintaxis.
+"""
+
+from __future__ import annotations
+
+__all__ = ["Inventory"]
+
+
+class Inventory:
+    """Inventario de red y seguimiento de uptime."""
+
+    def __init__(self) -> None:
+        """Inicializa un inventario vacío."""
+        self.hosts: dict[str, dict[str, object]] = {}
+
+    def add_host(self, host: str, data: dict[str, object] | None = None) -> None:
+        """Agrega o actualiza un host en el inventario.
+
+        Args:
+            host: Identificador del host.
+            data: Datos asociados al host.
+        """
+        # Placeholder: la implementación real se agregará en src/inventory.
+        self.hosts[host] = dict(data or {})
+
+    def list_hosts(self) -> list[str]:
+        """Lista los hosts registrados.
+
+        Returns:
+            Lista de hosts en el inventario.
+        """
+        # Placeholder: la implementación real se agregará en src/inventory.
+        return sorted(self.hosts.keys())
+
+    def uptime(self, host: str) -> float | None:
+        """Devuelve el uptime registrado para un host.
+
+        Args:
+            host: Identificador del host.
+
+        Returns:
+            Uptime en segundos, o None si no hay datos.
+        """
+        # Placeholder: la implementación real se agregará en src/inventory.
+        return None
