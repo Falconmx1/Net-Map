@@ -1,0 +1,30 @@
+"""Net-Map Tests: pruebas unitarias e integrales.
+
+Este módulo reserva la carpeta tests para las pruebas del proyecto.
+No se ejecuta automáticamente; es código fuente válido y sin errores de sintaxis.
+"""
+
+from __future__ import annotations
+
+import unittest
+
+__all__ = ["TestPlaceholder"]
+
+
+class TestPlaceholder(unittest.TestCase):
+    """Prueba placeholder para verificar que el entorno de tests funciona."""
+
+    def test_placeholder(self) -> None:
+        """Verifica una igualdad trivial."""
+        self.assertEqual(1 + 1, 2)
+
+    def test_core_importable(self) -> None:
+        """Verifica que el paquete core sea importable cuando exista."""
+        try:
+            import src.core  # noqa: F401
+        except ImportError:
+            self.skipTest("src.core aún no está implementado")
+
+
+if __name__ == "__main__":
+    unittest.main()
