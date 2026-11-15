@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "net-map"
+version = "0.1.0"
+description = "Herramienta open source para descubrimiento de redes y auditoría de seguridad."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0" }
+dependencies = [
+    "scapy>=2.5.0",
+]
+
+[project.scripts]
+netmap = "src.cli.main:main"
+
+[tool.setuptools]
+packages = [
+    "src",
+    "src.cli",
+    "src.core",
+    "src.packets",
+    "src.diff",
+    "src.transfer",
+    "src.inventory",
+    "src.gui",
+]
